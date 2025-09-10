@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskForge — To-Do App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="To-Do-App.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+<header class="header">
+  <div class="logo">Task<span>Forge</span></div>
+  <div class="slogan">Forge your productivity. One task at a time.</div>
+  <div class="theme-switch">
+    <span class="theme-label">Theme</span>
+    <label class="switch">
+      <input id="themeToggle" type="checkbox" aria-label="Toggle theme">
+      <span class="slider"></span>
+    </label>
+  </div>
+</header>
+    <main class="main">
+      <section class="todo-panel">
+        <form class="todo-input-bar" autocomplete="off">
+          <input type="text" id="todoInput" placeholder="Add a new task…" maxlength="80" autocomplete="off">
+          <button type="submit" class="add-btn" aria-label="Add task">
+            <span>+</span>
+          </button>
+        </form>
+
+        <ul class="todo-list" id="todoList">
+        </ul>
+
+        <footer class="todo-footer">
+          <div class="filters" id="filters">
+            <button data-filter="all" class="filter-btn active">All</button>
+            <button data-filter="active" class="filter-btn">Active</button>
+            <button data-filter="completed" class="filter-btn">Completed</button>
+          </div>
+          <div class="footer-right">
+            <span id="tasksLeft" class="tasks-left">0 tasks left</span>
+            <button id="clearCompleted" class="clear-completed">Clear completed</button>
+          </div>
+        </footer>
+      </section>
+
+      <aside class="stats-panel">
+        <div class="stat-card">
+          <div class="stat-label">Total</div>
+          <div class="stat-value" id="statTotal">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Completed</div>
+          <div class="stat-value" id="statCompleted">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Active</div>
+          <div class="stat-value" id="statActive">0</div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="To-Do-App.js"></script>
+</body>
+</html>
